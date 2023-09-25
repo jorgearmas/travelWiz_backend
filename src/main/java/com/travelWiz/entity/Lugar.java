@@ -32,7 +32,7 @@ public class Lugar implements Serializable {
 	@Column(name = "imagen")
 	private String imagen;
 
-	//GETTERS AND SETTERS
+	//GETTERS AND SETTERS  
 	public int getIdlugar() {
 		return idlugar;
 	}
