@@ -10,7 +10,7 @@ target/
 .project
 /logs/
 .settings/
-application.yml
+src/main/resources/application.yml
 
 
 ### STS ###
