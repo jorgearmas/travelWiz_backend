@@ -10,6 +10,7 @@ target/
 .project
 /logs/
 .settings/
+application.yml
 
 
 ### STS ###
