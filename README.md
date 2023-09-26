@@ -8,7 +8,7 @@ The application has been built with Java 17 using SpringBoot Framework. The desi
 <br>- service -> External view (REST API)
 
 <h2>Database</h2>
-The application uses MySQL as data source, the repository does not include the database configuration file. Your .yml file should look something like this:
+The application uses MySQL as data source, the repository includes the local database configuration file. Your application.yml file should look something like this:
 
 ```java
 spring:
