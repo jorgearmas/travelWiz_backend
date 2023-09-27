@@ -40,4 +40,18 @@ public class UsuarioService {
 	public void eliminar(@PathVariable("correo") String correo){
 		usuarioRepository.deleteById(correo);	
 	}
+	
+	//Service - Login
+	@PostMapping(path = "/login")
+	public Usuario findByCorreoAndPassword(@RequestBody Usuario usuario) {
+		
+		List<Usuario> listaUsuarios = usuarioRepository.findByCorreoAndPassword(usuario.getCorreo(), usuario.getPassword());
+		
+		Usuario usuarioRetorno = null;
+		if(!listaUsuarios.isEmpty()) {
+			usuarioRetorno = listaUsuarios.get(0);
+		}
+		
+		return usuarioRetorno;
+	}
 }
