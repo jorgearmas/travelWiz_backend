@@ -44,6 +44,8 @@ public class UsuarioService {
 	//Service - Login
 	@PostMapping(path = "/login")
 	public Usuario findByCorreoAndPassword(@RequestBody Usuario usuario) {
+	    System.out.println("Correo: " + usuario.getCorreo());
+	    System.out.println("Password: " + usuario.getPassword());
 		
 		List<Usuario> listaUsuarios = usuarioRepository.findByCorreoAndPassword(usuario.getCorreo(), usuario.getPassword());
 		
