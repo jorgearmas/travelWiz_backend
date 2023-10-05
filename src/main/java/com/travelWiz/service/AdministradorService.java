@@ -40,5 +40,21 @@ public class AdministradorService {
 		administradorRepository.deleteById(usuario);
 		
 	}
+	
+	//Service - Login
+	@PostMapping(path = "/login")
+	public Administrador findByUsuarioAndPassword(@RequestBody Administrador administrador) {
+	    System.out.println("Correo: " + administrador.getUsuario());
+	    System.out.println("Password: " + administrador.getPassword());
+		
+		List<Administrador> listaAdministradores = administradorRepository.findByUsuarioAndPassword(administrador.getUsuario(), administrador.getPassword());
+		
+		Administrador administradorRetorno = null;
+		if(!listaAdministradores.isEmpty()) {
+			administradorRetorno = listaAdministradores.get(0);
+		}
+		
+		return administradorRetorno;
+	}
 
 }
