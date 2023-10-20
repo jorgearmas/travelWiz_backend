@@ -48,9 +48,11 @@ public class AdministradorService {
 	    System.out.println("Password: " + administrador.getPassword());
 		
 		List<Administrador> listaAdministradores = administradorRepository.findByUsuarioAndPassword(administrador.getUsuario(), administrador.getPassword());
+		System.out.println("Prueba" + administrador.getUsuario());
 		
 		Administrador administradorRetorno = null;
 		if(!listaAdministradores.isEmpty()) {
+			
 			administradorRetorno = listaAdministradores.get(0);
 		}
 		

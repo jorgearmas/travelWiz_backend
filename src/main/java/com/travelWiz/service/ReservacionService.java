@@ -37,4 +37,11 @@ public class ReservacionService {
 	public void eliminar(@PathVariable("idreservación") int idreservación){
 		reservacionRepository.deleteById(idreservación);	
 	}
+	
+	
+	@GetMapping(path = "/buscar/correo/{correo}")
+	public List<Reservacion> buscarPorCorreo(@PathVariable String correo){
+		return reservacionRepository.findByCorreo(correo);
+	}
+
 }
