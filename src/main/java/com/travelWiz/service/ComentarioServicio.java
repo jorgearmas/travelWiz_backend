@@ -36,4 +36,9 @@ public class ComentarioServicio {
 	public void eliminar(@PathVariable("idcomentario") int idcomentario){
 		comentarioRepository.deleteById(idcomentario);	
 	}
+	
+	@GetMapping(path = "/buscar/fecha")
+	public List<Comentario> buscarOrdenFecha() {
+	    return comentarioRepository.findAllByOrderByFechaDesc();
+	}
 }
