@@ -1,5 +1,6 @@
 package com.travelWiz.service;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,4 +39,11 @@ public class ViajeService {
 		viajeRepository.deleteById(idviaje);
 		
 	}
+	
+	//DSL FILTRAR VIAJE POR ESTADO
+	@GetMapping(path = "/buscar/idestado/{idestado}")
+	public List<Viaje> buscarPorIdViaje(@PathVariable int idestado){
+		return viajeRepository.findByIdestado(idestado);
+	}
+	
 }
