@@ -37,6 +37,9 @@ public class Anuncio implements Serializable{
 	@Column(name = "fecha_fin")
 	private Date fechaFin;
 	
+	@Column(name = "idtipoanuncio")
+	private int idtipoanuncio;
+	
 	//GETTERS AND SETTERS
 
 	public int getIdanuncio() {
@@ -79,6 +82,13 @@ public class Anuncio implements Serializable{
 		this.fechaFin = fechaFin;
 	}
 	
+	public int getIdtipoanuncio() {
+		return idtipoanuncio;
+	}
+
+	public void setIdtipoanuncio(int idtipoanuncio) {
+		this.idtipoanuncio = idtipoanuncio;
+	}
 	
 
 }
